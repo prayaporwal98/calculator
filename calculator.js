@@ -112,7 +112,9 @@ function solve(){
 	     }
     }
 	else {
-	     alert("Invalid Entry !!!!!");
+	     document.getElementById("result").value = null;
+		 alert("Invalid Entry !!!!!");
+         break;
 	
 	}
 }	
