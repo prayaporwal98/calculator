@@ -1,0 +1,70 @@
+<html>
+   <head>
+       <title>My Calculator</title>
+	   <link rel="stylesheet" type="text/css" href="E:\Calculator\calculator.css">
+	   <script src="E:\Calculator\calculator.js"></script>
+   </head>
+
+   <body>
+      <div class = "parent">
+      <div class = "title">Calculator</div>
+      <table border="1" class="table1">
+          <tr>
+            <td colspan="6"><input type="text" id="result"/></td>
+            <td><input type="button" value="c" onclick="clr()"  class="btnNum2"/> </td>
+          </tr>
+        
+		<tr>
+            <td><input type="button" value="L10E" onclick="dis('LOG10E')"  class="btnNum3"/> </td>
+			<td><input type="button" value="L2E" onclick="dis('LOG2E')"  class="btnNum3"/> </td>
+            <td><input type="button" value="x!"  onclick="dis('!')"      class="btnNum3"/> </td>
+            <td><input type="button" value="("   onclick="dis('(')"      class="btnNum3"/> </td>
+            <td><input type="button" value=")"   onclick="dis(')')"      class="btnNum3"/> </td>
+			<td><input type="button" value="%"   onclick="dis('%')"      class="btnNum3"/> </td>
+            <td><input type="button" value="DEL" onclick="del()"         class="btnNum2"/> </td>
+         </tr>
+		
+		 <tr>
+		    <td><input type="button" value="Inv" class="btnNum3"  onclick="inv()"              id="inverse"/> </td>
+            <td><input type="button" value="sin" class="btnNum3"  onclick="disinverse('sin(')" id="button1"/> </td>
+			<td><input type="button" value="ln2" class="btnNum3"  onclick="dis('LN2')"         id="button4"/> </td>
+            <td><input type="button" value="7"   class="btnNum1"   onclick="dis('7')"/> </td>
+            <td><input type="button" value="8"   class="btnNum1"   onclick="dis('8')"/> </td>
+            <td><input type="button" value="9"   class="btnNum1"   onclick="dis('9')"/> </td>
+            <td><input type="button" value="÷"   class="btnNum"  onclick="dis('/')"/> </td>
+         </tr>
+		 
+         <tr>
+		    <td><input type="button" value="π"  class="btnNum3"  onclick="dis('PI')"/> </td>
+            <td><input type="button" value="cos"class="btnNum3"  onclick="disinverse('cos(')"  id="button2"/> </td>
+			<td><input type="button" value="log"class="btnNum3"  onclick="dis('log(')"/> </td>
+            <td><input type="button" value="4"  class="btnNum1"   onclick="dis('4')"/> </td>
+            <td><input type="button" value="5"  class="btnNum1"   onclick="dis('5')"/> </td>
+            <td><input type="button" value="6"  class="btnNum1"   onclick="dis('6')"/> </td>
+            <td><input type="button" value="*"  class="btnNum"  onclick="dis('*')"/> </td>
+         </tr>
+        
+		  <tr>
+            <td><input type="button" value="E"   class="btnNum3"   onclick="dis('E')"/> </td>
+            <td><input type="button" value="tan" class="btnNum3"   onclick="disinverse('tan(')"  id="button3"/> </td>
+			<td><input type="button" value="√"   class="btnNum3"   onclick="dis('sqrt(')"/> </td>
+            <td><input type="button" value="1"   class="btnNum1"    onclick="dis('1')"/> </td>
+            <td><input type="button" value="2"   class="btnNum1"    onclick="dis('2')"/> </td>
+            <td><input type="button" value="3"   class="btnNum1"    onclick="dis('3')"/> </td>
+            <td><input type="button" value="-"   class="btnNum"   onclick="dis('-')"/> </td>
+         </tr>
+		 
+         <tr>
+		    
+            <td><input type="button" value="EXP"  onclick="dis('exp(')"  class="btnNum3" /> </td>
+			<td><input type="button" value="pow"  onclick="dis('pow(')"  class="btnNum3" /> </td>
+			<td><input type="button" value=","    onclick="dis(',')"     class="btnNum3"/> </td>
+			<td><input type="button" value="="    onclick="solve()"      class="btnNum3"/> </td>
+			<td><input type="button" value="0"    onclick="dis('0')"     class="btnNum1"/> </td>
+            <td><input type="button" value="."    onclick="dis('.')"     class="btnNum3"/> </td>
+            <td><input type="button" value="+"    onclick="dis('+')"     class="btnNum"/> </td>
+         </tr>
+      </table>
+	 </div> 
+   </body>
+</html>  
