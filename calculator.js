@@ -1,11 +1,11 @@
-function dis(val){
+function display(val){
     if ((val=='sin(') || (val=='cos(') || (val=='tan(') || (val=='LN2') || (val=='PI') ) {
 	    document.getElementById("result").value=val;
 	}
-	 else if ((val=='LN2') || (val=='PI') || (val=='log(') || (val=='LOG2E') ) {
+	else if ((val=='LN2') || (val=='PI') || (val=='log(') || (val=='LOG2E') ) {
 	    document.getElementById("result").value=val;
 	}
-	 else if ((val=='E') || (val=='sqrt(') || (val=='pow(') || (val=='exp(') ) {
+	else if ((val=='E') || (val=='sqrt(') || (val=='pow(') || (val=='exp(') ) {
 	    document.getElementById("result").value=val;
 	}
 	else {
@@ -14,13 +14,13 @@ function dis(val){
 }
   
 
-function disinverse(val){
+function displayinverse(val){
     if (val=='sin('){
         if (document.getElementById("button1").value == 'sin-1'){
 	         document.getElementById("result").value='asin(';
 	    }
 		else {
-	       dis(val);
+	       display(val);
 	    }
 	}	
 	else if ( val=='cos('){
@@ -28,7 +28,7 @@ function disinverse(val){
 	        document.getElementById("result").value='acos(';
 	    }
 		else{
-	       dis(val);
+	       display(val);
 	    }
 	}
     else if (val=='tan('){	
@@ -36,7 +36,7 @@ function disinverse(val){
 	        document.getElementById("result").value='atan(';
 	    }
 		else {
-	       dis(val);
+	       display(val);
 	    }
 	}	
 } 
@@ -51,7 +51,7 @@ function del(){
 	let size = x.length;
 	n = x.substring(0, size-1);
 	clr();
-	dis(n);
+	display(n);
 }  
          
 function solve(){  
@@ -59,7 +59,11 @@ function solve(){
    let size = x.length;
    for (var i = 0; i < size; i++) {
 	var ch = x.charAt(i);
-	if ((ch=='1') || (ch=='2') ||(ch=='3') || (ch=='4')|| (ch=='5') ||(ch=='6') ||(ch=='7') || (ch=='8') ||(ch=='9') || (ch=='0')|| (ch=='.') ||(ch==',') ||(ch=='+') || (ch=='*') ||(ch=='-') || (ch=='/')|| (ch=='%') ||(ch=='(') ||(ch==')') || (ch=='E')|| (x.includes('pow(')) ||(x.includes('exp(')) || (x.includes('sqrt('))|| (x.includes('tan(')) ||(x.includes('log(')) ||(x.includes('cos(')) || (x=='PI') ||(x=='LOG10E') ||(x=='LN2') || (x.includes('sin('))|| (ch=='!') ||(x=='LOG2E') ||(x.includes('sqrt(')) || (x.includes('asin(')) || (x.includes('acos(')) || (x.includes('atan(')) ){
+	if ((ch=='1') || (ch=='2') ||(ch=='3') || (ch=='4')|| (ch=='5') ||(ch=='6') ||(ch=='7') || (ch=='8') ||(ch=='9') ||
+     	(ch=='0')|| (ch=='.') ||(ch==',') ||(ch=='+') || (ch=='*') ||(ch=='-') || (ch=='/')|| (ch=='%') ||(ch=='(') ||
+		(ch==')') || (ch=='E')|| (x.includes('pow(')) ||(x.includes('exp(')) || (x.includes('sqrt('))|| (x.includes('tan(')) ||
+		(x.includes('log(')) ||(x.includes('cos(')) || (x=='PI') ||(x=='LOG10E') ||(x=='LN2') || (x.includes('sin('))||
+		(ch=='!') ||(x=='LOG2E') ||(x.includes('sqrt(')) || (x.includes('asin(')) || (x.includes('acos(')) || (x.includes('atan(')) ){
 			
     if (x.includes("!")){
      	n = Number(x.substring(0, size-1));
@@ -68,7 +72,7 @@ function solve(){
 		for(i = 2; i <= n; i++)
 			f = f*i;
 	   	clr();	
-		dis(f);
+		display(f);
 	} 
 
              
@@ -76,7 +80,7 @@ function solve(){
 		n = Number(x.substring(0, size-1));
 		f = n/100; 
 		clr();	
-		dis(f);
+		display(f);
 	}
 	
 	else if (x.includes("sin(") || x.includes("cos(") ||x.includes("tan(")) {
